@@ -1,4 +1,4 @@
-<% let links = [{name: 'Home', url: '/'}, {name: 'Products', url: '/products'}, {name: 'Contact', url:'/contact'}] %>
+<% let {links} = JSON.parse(include('./../../data/content_site.json'));%>
 
 <nav id="wrapper-main-nav" aria-label="Global">
     <div class="wrapper-menu">
