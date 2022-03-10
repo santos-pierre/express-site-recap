@@ -5,7 +5,7 @@ const { Request, Response } = require('express');
  * @param {Response} res
  */
 const index = (req, res) => {
-    res.sendStatus(501);
+    res.render('pages/home/index', { title: 'HomePage' });
 };
 
 const HomeController = { index };
