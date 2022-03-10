@@ -7,7 +7,7 @@
 @import 'vendors/tailwindcss';
 
 // 3. Base stuff
-@import 'base/fonts';
+@import 'base/fonts', 'base/base';
 
 // 4. Layout-related sections
 @import 'layout/hero', 'layout/footer', 'layout/nav';
