@@ -9,9 +9,18 @@ const { cryptos } = require('./../data/content_site.json');
 const index = (req, res) => {
     res.render('pages/cryptos/index', { title: 'Crypto', cryptos });
 };
-
+/**
+ *
+ * @param {Request} req
+ * @param {Response} res
+ */
 const show = (req, res) => {
-    res.sendStatus(501);
+    const crypto = cryptos.find((crypto) => crypto.id === req.params.id);
+
+    if (!crypto) {
+        res.sendStatus(404);
+    }
+    res.render('pages/cryptos/show', { title: crypto.name, crypto });
 };
 
 const HomeController = { index, show };
