@@ -15,7 +15,7 @@ const index = (req, res) => {
  * @param {Response} res
  */
 const sendForm = (req, res) => {
-    res.sendStatus(501);
+    res.render('pages/contact/success', { title: 'Sucess', ...req.body });
 };
 
 const ContactController = { index, sendForm };

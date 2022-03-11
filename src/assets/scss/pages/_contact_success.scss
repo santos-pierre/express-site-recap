@@ -1,0 +1,73 @@
+#contact-success-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+}
+
+#contact-success,
+#contact-success-button {
+    margin-top: 1.25rem;
+}
+
+#contact-success {
+    display: inline-block;
+    vertical-align: bottom;
+    background-color: #334155;
+    border-radius: 0.5rem;
+    padding: 1.5rem 1rem;
+    overflow: hidden;
+    #contact-success-message {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        #contact-success-message-icon {
+            display: flex;
+            margin: auto 0;
+            align-items: center;
+            justify-content: center;
+            height: 3rem;
+            width: 3rem;
+            border-radius: 9999px;
+            background-color: #dcfce7;
+            svg {
+                color: #16a34a;
+                height: 1.5rem;
+                width: 1.5rem;
+            }
+        }
+        #contact-success-message-content {
+            margin-top: 0.75rem;
+            text-align: center;
+            h3 {
+                font-size: 1.125rem;
+                line-height: 1.75rem;
+                font-weight: 500;
+            }
+            div {
+                margin-top: 0.5rem;
+                p {
+                    font-size: 0.875rem;
+                    line-height: 1.25rem;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $breakpoints-sm) {
+    #contact-success {
+        margin: 2rem 0;
+        vertical-align: middle;
+        width: 100%;
+        padding: 1.5rem;
+        max-width: 24rem;
+    }
+    #contact-success-message-content {
+        margin-top: 1.25rem;
+    }
+
+    #contact-success {
+        margin-top: 1.25rem;
+    }
+}
