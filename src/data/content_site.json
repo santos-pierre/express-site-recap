@@ -1,7 +1,33 @@
 {
     "links": [
         { "name": "Home", "url": "/" },
-        { "name": "Pricing", "url": "/pricing" },
+        { "name": "Cryptos", "url": "/cryptos" },
         { "name": "Contact", "url": "/contact" }
+    ],
+    "cryptos": [
+        {
+            "id": "bitcoin",
+            "name": "Bitcoin",
+            "description": "Bitcoin (₿) is a decentralized digital currency, without a central bank or single administrator, that can be sent from user to user on the peer-to-peer bitcoin network without the need for intermediaries.Transactions are verified by network nodes through cryptography and recorded in a public distributed ledger called a blockchain. The cryptocurrency was invented in 2008 by an unknown person or group of people using the name Satoshi Nakamoto.The currency began use in 2009when its implementation was released as open-source software.",
+            "currentValue": "35691,76 €",
+            "createdAt": "3 january 2009",
+            "imageUrl": "/assets/img/bitcoin.png"
+        },
+        {
+            "id": "etherum",
+            "name": "Etherum",
+            "description": "Ethereum is a decentralized, open-source blockchain with smart contract functionality. Ether (ETH or Ξ) is the native cryptocurrency of the platform. Among cryptocurrencies, Ether is second only to Bitcoin in market capitalization. ",
+            "currentValue": "2370,15 €",
+            "createdAt": "30 july 2015",
+            "imageUrl": "/assets/img/etherum.png"
+        },
+        {
+            "id": "solana",
+            "name": "Solana",
+            "description": "Solana is a public blockchain platform with smart contract functionality. Its native cryptocurrency is SOL. Solana works to one up Ethereum by providing faster transaction times and cheaper fees.",
+            "currentValue": "74,79 €",
+            "createdAt": "30 july 2015",
+            "imageUrl": "/assets/img/solana.png"
+        }
     ]
 }

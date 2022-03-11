@@ -1,0 +1,12 @@
+.main-title {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    font-weight: 700;
+}
+
+@media (min-width: $breakpoints-sm) {
+    .main-title {
+        font-size: 1.875rem;
+        line-height: 2.25rem;
+    }
+}

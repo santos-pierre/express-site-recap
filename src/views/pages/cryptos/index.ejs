@@ -1,0 +1,21 @@
+<%-contentFor('content') %>
+<!-- Hero Section -->
+<main class="container">
+    <h1 class="main-title">Cryptos</h1>
+    <ul role="list" id="crypto-list">
+        <% cryptos.forEach((crypto) =>{ %>
+        <a href="/cryptos/<%= crypto.id %>" class="crypto-card">
+            <div>
+                <img src="<%= crypto.imageUrl %> " alt="<%= crypto.name%>-logo" />
+                <h3><%= crypto.name %></h3>
+                <dl>
+                    <dd><%= crypto.description%></dd>
+                    <dd>
+                        <span><%= crypto.currentValue%></span>
+                    </dd>
+                </dl>
+            </div>
+        </a>
+        <% }); %>
+    </ul>
+</main>

@@ -396,10 +396,30 @@ body {
   font-size: 16px;
 }
 
-.mt-10 {
-  margin-top: 2.5rem;
+.container {
+  margin-top: 4rem;
+  margin: 0 auto;
+  max-width: 80rem;
+  padding: 0 1rem;
 }
 
+@media (min-width: 640px) {
+  .container {
+    margin-top: 6rem;
+  }
+}
+.main-title {
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+}
+
+@media (min-width: 640px) {
+  .main-title {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
 #hero {
   padding-top: 2.5rem;
   background-color: #0f172a;
@@ -637,6 +657,81 @@ body {
     font-size: 1.125rem;
     line-height: 1.75rem;
     padding: 1rem 2.5rem;
+  }
+}
+#crypto-list {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin: 4rem 0;
+}
+#crypto-list .crypto-card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 0.5rem;
+  grid-column: span 1/span 1;
+  background-color: #334155;
+}
+#crypto-list .crypto-card:hover {
+  background-color: #1e293b;
+}
+#crypto-list .crypto-card div {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 2rem;
+}
+#crypto-list .crypto-card div img {
+  width: 8rem;
+  height: 8rem;
+  flex-shrink: 0;
+  margin: 0 auto;
+  border-radius: 9999px;
+}
+#crypto-list .crypto-card div h3 {
+  margin-top: 1.25rem;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+#crypto-list .crypto-card div dl {
+  margin-top: 0.25rem;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#crypto-list .crypto-card div dl dd:first-child {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+  overflow: hidden;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #cbd5e1;
+}
+#crypto-list .crypto-card div dl dd {
+  margin-top: 1rem;
+}
+#crypto-list .crypto-card div dl dd:last-child span {
+  padding: 0.25rem 0.5rem;
+  color: #16a34a;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  background-color: #bbf7d0;
+  border-radius: 9999px;
+}
+
+@media (min-width: 640px) {
+  #crypto-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 768px) {
+  #crypto-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
