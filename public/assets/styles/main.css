@@ -652,6 +652,24 @@ body {
   opacity: 0.8;
 }
 
+.btn-form {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border: 1px solid transparent;
+  font-weight: 500;
+  border-radius: 0.375rem;
+  background-color: #2563eb;
+  width: 100%;
+  margin: 1rem 0;
+}
+.btn-form:hover {
+  opacity: 0.8;
+}
+
 @media (min-width: 768px) {
   .btn-cta a {
     font-size: 1.125rem;
@@ -733,6 +751,47 @@ body {
   #crypto-list {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+}
+#contact-form {
+  padding: 1rem 0;
+}
+
+.contact-form-group {
+  margin: 1rem 0;
+  display: grid;
+  gap: 1rem 0;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+@media (min-width: 640px) {
+  .contact-form-group {
+    gap: 4rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.contact-input label {
+  display: block;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  text-transform: capitalize;
+}
+.contact-input div {
+  margin-top: 0.25rem;
+}
+.contact-input div input,
+.contact-input div textarea {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  border-radius: 0.375rem;
+  background-color: #334155;
+  border: solid #64748b 1px;
+  padding: 0.5rem 0.75rem;
+  width: 100%;
+}
+.contact-input div input:focus {
+  border: solid 1px #2563eb;
+  outline: none;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,5 +1,6 @@
 const express = require('express');
 const expressLayouts = require('express-ejs-layouts');
+const ContactRoutes = require('./routes/ContactRoutes');
 const CryptoRoutes = require('./routes/CryptoRoutes');
 const HomeRoutes = require('./routes/HomeRoutes');
 
@@ -37,6 +38,7 @@ app.set('views', './src/views');
  */
 app.use(HomeRoutes);
 app.use('/cryptos', CryptoRoutes);
+app.use(ContactRoutes);
 
 app.listen(PORT, () => {
     console.log(`Runing on => ${BASE_URL}:${PORT}`);

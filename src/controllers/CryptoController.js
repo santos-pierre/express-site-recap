@@ -16,7 +16,6 @@ const index = (req, res) => {
  */
 const show = (req, res) => {
     const crypto = cryptos.find((crypto) => crypto.id === req.params.id);
-
     if (!crypto) {
         res.sendStatus(404);
     }
