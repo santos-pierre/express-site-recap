@@ -1,5 +1,12 @@
 const { Request, Response } = require('express');
-const { ContactFormValidationSchema } = require('../validator/ContactFormValidation');
+
+const defaultFormField = {
+    pseudo: '',
+    email: '',
+    first_name: '',
+    last_name: '',
+    message: '',
+};
 
 /**
  *
@@ -7,7 +14,7 @@ const { ContactFormValidationSchema } = require('../validator/ContactFormValidat
  * @param {Response} res
  */
 const index = (req, res) => {
-    return res.render('pages/contact/index', { title: 'Contact' });
+    return res.render('pages/contact/index', { title: 'Contact', ...defaultFormField, errors: {} });
 };
 /**
  *
@@ -15,18 +22,12 @@ const index = (req, res) => {
  * @param {Response} res
  */
 const sendForm = async (req, res) => {
-    console.log(req.body);
-    try {
-        await ContactFormValidationSchema.isValid(req.body);
-        res.json(req.body);
-    } catch (error) {
-        console.log(error);
-        res.sendStatus(422);
+    if (req.hasFormError) {
+        console.log(req.formError);
+        console.log(req.body);
+        return res.render('pages/contact/', { title: 'Contact', errors: req.formError, ...req.body });
     }
-
-    // if (ContactFormValidationSchema.isValid()) {
-    // }
-    // res.render('pages/contact/success', { title: 'Message Sent', ...req.body });
+    return res.render('pages/contact/success', { title: 'Message Sent - Thank You !', ...req.body });
 };
 
 const ContactController = { index, sendForm };

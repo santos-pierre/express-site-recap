@@ -804,6 +804,23 @@ body {
   border: solid 1px #2563eb;
   outline: none;
 }
+.contact-input .input-error-message {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #dc2626;
+}
+
+.contact-input.contact-input-error input,
+.contact-input.contact-input-error textarea {
+  color: #dc2626;
+  border: solid #dc2626 1px;
+}
+.contact-input.contact-input-error input:focus,
+.contact-input.contact-input-error textarea:focus {
+  border: solid 1px #dc2626;
+  outline: none;
+}
 
 #contact-success-wrapper {
   display: flex;

@@ -3,38 +3,53 @@
     <h1 class="main-title">Contact</h1>
     <form action="/contact" method="POST" id="contact-form">
         <div class="contact-form-group">
-            <div class="contact-input">
+            <div class="contact-input <%= errors.hasOwnProperty('pseudo') ? 'contact-input-error' : '' %>">
                 <label for="pseudo">pseudo</label>
                 <div>
-                    <input type="text" name="pseudo" id="pseudo" required />
+                    <input type="text" name="pseudo" id="pseudo" value="<%= pseudo %>" required />
                 </div>
+                <% if (errors.hasOwnProperty('pseudo')) { %>
+                <p class="input-error-message"><%= errors.pseudo.message %></p>
+                <% } %>
             </div>
-            <div class="contact-input">
+            <div class="contact-input <%= errors.hasOwnProperty('email') ? 'contact-input-error' : '' %>">
                 <label for="email">email</label>
                 <div>
-                    <input type="email" name="email" id="email" required />
+                    <input type="email" name="email" id="email" value="<%= email %>" required />
                 </div>
+                <% if (errors.hasOwnProperty('email')) { %>
+                <p class="input-error-message"><%= errors.email.message %></p>
+                <% } %>
             </div>
         </div>
         <div class="contact-form-group">
-            <div class="contact-input">
+            <div class="contact-input <%= errors.hasOwnProperty('first_name') ? 'contact-input-error' : '' %>">
                 <label for="first_name">first name</label>
                 <div>
-                    <input type="text" name="first_name" id="first_name" />
+                    <input type="text" name="first_name" id="first_name" value="<%= first_name %>" />
                 </div>
+                <% if (errors.hasOwnProperty('first_name')) { %>
+                <p class="input-error-message"><%= errors.first_name.message %></p>
+                <% } %>
             </div>
-            <div class="contact-input">
+            <div class="contact-input <%= errors.hasOwnProperty('last_name') ? 'contact-input-error' : '' %>">
                 <label for="last_name">last name</label>
                 <div>
-                    <input type="text" name="last_name" id="last_name" />
+                    <input type="text" name="last_name" id="last_name" value="<%= last_name %>" />
                 </div>
+                <% if (errors.hasOwnProperty('last_name')) { %>
+                <p class="input-error-message"><%= errors.last_name.message %></p>
+                <% } %>
             </div>
         </div>
-        <div class="contact-input">
+        <div class="contact-input <%= errors.hasOwnProperty('message') ? 'contact-input-error' : '' %>">
             <label for="message">Message</label>
             <div>
-                <textarea rows="4" name="message" id="message" required></textarea>
+                <textarea rows="4" name="message" id="message" required><%= message %></textarea>
             </div>
+            <% if (errors.hasOwnProperty('message')) { %>
+            <p class="input-error-message"><%= errors.message.message %></p>
+            <% } %>
         </div>
 
         <button type="submit" class="btn-form">Send</button>
